@@ -43,3 +43,29 @@ classpath路径下的静态资源或者视图模板等发生变化时，并不�
 spring.devtools.restart.trigger-file=.trigger-file
 ```
 
+
+```
+#spring:
+#  devtools:
+#    restart:
+      # 这个配置表示从默认不触发重启的目录中除去static目录，即static目录里面的资源发生变化时，会触发重启
+      #exclude: static/**
+      # 这个表示直接配置需要监控自动重启的目录
+      #additional-paths: src/main/resources/static
+      # 这个配置表示修改代码时，项目不会自动重启，需要重启时，只需要修改这个文件里面的内容即可，需要注意的时，如果项目没有改动，只是单纯的改了这个文件，项目不会重启
+      # trigger-file: .trigger-file
+
+# 关闭LiveReload特性（建议开发时使用LiveReload特性实现静态资源的动态加载）
+#spring:
+#  devtools:
+#    livereload:
+#      enabled: false
+
+spring:
+  devtools:
+    livereload:
+      enabled: true
+    # 禁用自动重启
+    restart:
+      enabled: false
+```
