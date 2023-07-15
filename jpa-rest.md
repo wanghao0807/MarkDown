@@ -112,3 +112,35 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
 ## 8. 配置CORS
 
 一般前后端分离的项目都必须支持跨域，关于跨域的配置，参考cors项目
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql:///jparestful
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
+    open-in-view: true
+  data:
+    rest:
+      # 每页默认记录数，默认值为20
+      default-page-size: 2
+      # 分页查询页码参数名，默认值为page
+      page-param-name: page
+      # 分页查询记录数参数名，默认值为size
+      limit-param-name: size
+      # 分页查询排序参数名，默认值为sort
+      sort-param-name: sort
+      # base-path表示给所有请求路径都加上前缀
+      base-path: /api
+      # 添加成功时是否返回添加内容
+      return-body-on-create: true
+      # 更新成功时是否返回更新内容
+      return-body-on-update: true
