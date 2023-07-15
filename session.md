@@ -199,6 +199,7 @@ http://外网ip:80/get
 
 经过以上步骤，就完成了利用Redis实现Session共享的功能，基本上不需要额外配置，开箱即用。
 
+```
 spring:
   redis:
     database: 0
@@ -211,3 +212,6 @@ spring:
         max-idle: 8
         max-wait: -1ms
         min-idle: 0
+```
+
+
