@@ -198,3 +198,16 @@ http://外网ip:80/get
 调用端口依然是80，但是返回值是8081，说明是8081那台real server提供的服务，如果这里不是8081，再访问一次即可。
 
 经过以上步骤，就完成了利用Redis实现Session共享的功能，基本上不需要额外配置，开箱即用。
+
+spring:
+  redis:
+    database: 0
+    host: 47.107.46.16
+    port: 6379
+    password: 123@456
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
