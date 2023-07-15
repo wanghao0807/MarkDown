@@ -6,6 +6,7 @@
 4. 创建测试类（参考项目）
 5. 配置redis（参考redis项目）
 
+   ```
 # 缓存配置
 spring:
   cache:
@@ -27,3 +28,6 @@ spring:
         max-idle: 8
         max-wait: -1ms
         min-idle: 0
+   ```
+
+
