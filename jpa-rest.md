@@ -113,7 +113,8 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
 
 一般前后端分离的项目都必须支持跨域，关于跨域的配置，参考cors项目
 
-spring:
+  ```
+  spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
@@ -144,3 +145,6 @@ spring:
       return-body-on-create: true
       # 更新成功时是否返回更新内容
       return-body-on-update: true
+  ```
+
+
