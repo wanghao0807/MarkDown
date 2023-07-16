@@ -18,4 +18,14 @@ logging:
     com.scoundrel.springsecurity1.mapper: trace
 ```
 
+```
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+```
+
+
+
 
