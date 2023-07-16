@@ -2,6 +2,7 @@
 
 1. 参考项目
 
+```
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -15,3 +16,6 @@ mybatis:
 logging:
   level:
     com.scoundrel.springsecurity1.mapper: trace
+```
+
+
