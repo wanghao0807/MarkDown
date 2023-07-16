@@ -278,5 +278,28 @@ redis-server ../8007/redis.conf
 
 中间的实例地址表示集群中的任意一个实例，最后的参数表示要删除的节点id，但若删除的节点占有slot，则会删除失败，此时按照第五步提到的方法，先将要删除节点的slot全部都分配出去，然后运行如上命令就可以成功删除一个占有slot的节点了。
 
+```
+spring:
+  redis:
+    cluster:
+      ports:
+        - 8001
+        - 8002
+        - 8003
+        - 8004
+        - 8005
+        - 8006
+        - 8007
+        - 8008
+      host: 119.23.110.130
+      poolConfig:
+        max-total: 8
+        max-idle: 8
+        max-wait-millis: -1
+        min-idle: 0
+```
+
+
+
 
 ​       
