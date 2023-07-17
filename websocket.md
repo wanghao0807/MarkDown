@@ -1,0 +1,3 @@
+# SpringBoot整合Websocket
+
+通过@MessageMapping注解配置消息接口，通过@SendTo或者SimpMessagingTemplate进行消息转发。
